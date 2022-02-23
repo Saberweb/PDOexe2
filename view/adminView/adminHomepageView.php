@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <title>Bootswatch: Lux</title>
-  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/custom.min.css">
+
 </head>
 
 <body>
+
   <div class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
     <div class="container">
       <a href="./" class="navbar-brand">Accueil</a>
@@ -20,21 +20,16 @@
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
-
-        <li class="nav-item dropdown show">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Section</a>
-          <div class="dropdown-menu" aria-labelledby="themes">
-            <?php
-            foreach ($sections as $section) {
-            ?>
-              <a class="dropdown-item" href="?idsection=<?= $section['idthesection'] ?>"><?= $section['thesectiontitle'] ?></a>
-            <?php
-            }
-            ?>
-            <div class="dropdown-divider"></div>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
         </li>
-        <!-- <li class="nav-item dropdown">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Section</a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#">Action</a>
@@ -43,12 +38,12 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Separated link</a>
           </div>
-        </li> -->
+        </li>
       </ul>
       <ul class="navbar-nav ms-md-auto">
 
         <li class="nav-item">
-          <a rel="noopener" class="nav-link" href="?connect"> Connexion</a>
+          <a rel="noopener" class="nav-link" href="?disconnect"> Déconnexion</a>
         </li>
       </ul>
     </div>
@@ -92,18 +87,14 @@
   </div>
 
   <?php
-  //var_dump($articles);
-  foreach ($articles as $article) {
-  ?>
-    <h2><?= $article["thearticletitle"] ?></h2>
-    <p><?= $article["thearticletext"] ?> <a href="?idarticle=<?= $article["idthearticle"] ?>">Lire la suite</a></p>
-    <p> <a href="?idauteur=<?= $article["idtheuser"] ?>"><?= $article["theusername"] ?></a></p>
-    <p><?= $article["thearticledate"] ?></p>
-    <p><?= $article["thesectiontitle"] ?></p>
-  <?php
-  }
-  ?>
-
-  <?php
   include '../view/footer.php';
   ?>
+
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
